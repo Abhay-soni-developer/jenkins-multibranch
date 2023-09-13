@@ -3,7 +3,7 @@ pipeline{
         label "node"
     }
     environment {
-        docker_email="abhaysoni.developer@gmail.com",
+        docker_email="abhaysoni.developer@gmail.com"
         docker_password="262409ABhay87"
     }
     stages{

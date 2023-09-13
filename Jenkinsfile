@@ -8,7 +8,9 @@ pipeline{
     }
     stages{
         stage("build_docker_image") {
-            echo "this is build docker image"
+            steps {
+                echo "this is build docker image"
+            }
         }
 
         stage("deploy"){

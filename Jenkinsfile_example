@@ -1,0 +1,72 @@
+pipeline {
+    agent docker
+    environment {
+        name = "Abhay soni"
+    }
+    tools {
+        
+    }
+    parameters {
+        string(name: 'animal', defaultValue: 'lion', description: 'a animal name')
+    }
+    stages {
+
+        stage('Hello') {
+            environment {
+                employee = "raksha soni"
+            }
+            
+            steps {
+                echo 'Hello World'
+                echo "My name is ${employee}"
+                docker --version
+                echo "My name is ${BUILD_ID}"
+                
+            }
+        }
+        
+        stage('deploy') {
+            steps {
+                echo "Hello World i am deploying"
+                echo "My name is ${name}"
+                echo "My pet is a ${animal}"
+            }
+        }
+            
+        
+
+        
+        stage('continue') {
+
+            when {
+                branch 'master'
+            }
+
+            input { 
+                message "should we continue"
+            }
+            
+            steps {
+                echo "this is confirmation stage"
+            }
+        }
+        
+        stage('paramters') {
+            steps {
+                echo "My pet is a ${animal}"
+            }
+        }
+    }
+    post {
+        always {
+            echo "i am always"
+        }
+        success {
+            echo "i am success"
+        }
+        failure {
+            echo "i am failure"
+
+        }
+    }
+}

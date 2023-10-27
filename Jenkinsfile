@@ -8,7 +8,7 @@ pipeline {
         buildId="${BUILD_ID}"
     }
     
-    stages{
+    stages {
         stage("build_docker_image") {
             echo 'Hello World'
             echo "My name is ${gitBranch}"

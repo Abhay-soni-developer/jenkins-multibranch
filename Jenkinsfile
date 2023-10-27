@@ -21,6 +21,8 @@ pipeline {
                 echo "My name is ${employee}"
                 echo "My name is ${BUILD_ID}"
                 echo "buld ID = ${buildId}"
+                echo "build branch = ${gitBranch}"
+                echo "my commit ID = ${commitId}"
                 // echo "${DOCKER_CREDS_USR}"
                 
                 echo "${PATH}"

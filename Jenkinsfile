@@ -9,7 +9,7 @@ pipeline {
     }
     
     stages {
-        stage("build_docker_image") {
+        stage('build_docker_image') {
             echo 'Hello World'
             echo "My name is ${gitBranch}"
             echo "My name is ${BUILD_ID}"
@@ -17,7 +17,7 @@ pipeline {
             echo "branch name = ${GIT_BRANCH}"
         }
 
-        stage("deploy"){
+        stage('deploy'){
             steps{
                 echo "========executing A========"
             }

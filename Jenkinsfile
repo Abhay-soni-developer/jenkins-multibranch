@@ -10,6 +10,19 @@ pipeline {
     
     stages {
 
+
+        stage('approve') {
+
+            input { 
+                message "should we continue"
+            }
+            
+            steps {
+                echo "this is confirmation stage"
+            }
+        }
+
+        
         stage('Hello') {
             
             environment {

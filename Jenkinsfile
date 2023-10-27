@@ -1,10 +1,8 @@
 pipeline{
-    agent{
-        label "node"
+    agent {
+        any
     }
     environment {
-        docker_email="abhaysoni.developer@gmail.com",
-        docker_password="262409ABhay87"
         gitBranch="${GIT_BRANCH}"
         commitId="${GIT_COMMIT}"
         buildId="${BUILD_ID}"

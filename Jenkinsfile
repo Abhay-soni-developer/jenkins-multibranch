@@ -1,7 +1,6 @@
 pipeline{
-    agent {
-        any
-    }
+    agent any
+    
     environment {
         gitBranch="${GIT_BRANCH}"
         commitId="${GIT_COMMIT}"

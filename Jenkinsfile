@@ -50,26 +50,15 @@ pipeline {
         
         stage('production') {
             
-            // when {
-            //     branch 'master'
-            // }
-            
-            // when {
-            //     expression {
-            //         params.animal == 'lion'
-            //     }
-            // }
             
             steps {
                 echo "Hello World i am deploying"
-                echo "My name is ${name}"
-                echo "My pet is a ${animal}"
             }
         }
         
         stage('paramters') {
             steps {
-                echo "My pet is a ${animal}"
+                echo "My pet is a Abhay"
             }
         }
     }
